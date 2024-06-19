@@ -20,6 +20,7 @@
         if(firstRender) {
             var storageTasks = await LocalStorageAccessor.GetValueAsync<List<TodoTask>>("todos");
             foreach(TodoTask t in storageTasks) tasks.Add(t);
+            StateHasChanged();
         }
     }
 

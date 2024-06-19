@@ -1029,3 +1029,4 @@ c:\Users\maria.amzil.ext\ToDoList\ToDoList.App\obj\Debug\net8.0\compressed\ti8bi
 c:\Users\maria.amzil.ext\ToDoList\ToDoList.App\obj\Debug\net8.0\compressed\m4jot9mzvk.gz
 c:\Users\maria.amzil.ext\ToDoList\ToDoList.App\obj\Debug\net8.0\compressed\q45v9wrevw.gz
 c:\Users\maria.amzil.ext\ToDoList\ToDoList.App\obj\Debug\net8.0\compressed\tgic3hyvrp.gz
+c:\Users\maria.amzil.ext\ToDoList\ToDoList.App\obj\Debug\net8.0\ToDoList.App.sourcelink.json
