@@ -31,6 +31,8 @@
     }
     
     private async Task SaveAsync() {
+        //ESTA FEO NO HACER
+        //await Task.Delay(1);
         await LocalStorageAccessor.SetValueAsync<List<TodoTask>>("todos", tasks);
     }
 }
