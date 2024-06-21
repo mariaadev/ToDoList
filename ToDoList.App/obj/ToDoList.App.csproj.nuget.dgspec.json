@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\maria.amzil.ext\\ToDoList\\ToDoList.App\\ToDoList.App.csproj": {}
+    "C:\\Users\\maria.amzil.ext\\ToDoList\\ToDoList.App\\ToDoList.App.csproj": {}
   },
   "projects": {
-    "c:\\Users\\maria.amzil.ext\\ToDoList\\ToDoList.App\\ToDoList.App.csproj": {
+    "C:\\Users\\maria.amzil.ext\\ToDoList\\ToDoList.App\\ToDoList.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\maria.amzil.ext\\ToDoList\\ToDoList.App\\ToDoList.App.csproj",
+        "projectUniqueName": "C:\\Users\\maria.amzil.ext\\ToDoList\\ToDoList.App\\ToDoList.App.csproj",
         "projectName": "ToDoList.App",
-        "projectPath": "c:\\Users\\maria.amzil.ext\\ToDoList\\ToDoList.App\\ToDoList.App.csproj",
+        "projectPath": "C:\\Users\\maria.amzil.ext\\ToDoList\\ToDoList.App\\ToDoList.App.csproj",
         "packagesPath": "C:\\Users\\maria.amzil.ext\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\maria.amzil.ext\\ToDoList\\ToDoList.App\\obj\\",
+        "outputPath": "C:\\Users\\maria.amzil.ext\\ToDoList\\ToDoList.App\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\maria.amzil.ext\\AppData\\Roaming\\NuGet\\NuGet.Config"
