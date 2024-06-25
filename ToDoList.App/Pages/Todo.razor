@@ -1,6 +1,6 @@
 @page "/todo"
 @using global::ToDoList.App
-@using global::ToDoList.App.DTO
+@using global::ToDoList.DTO
 @inject LocalStorageAccessor LocalStorageAccessor
 
 <PageTitle>Todo</PageTitle>
@@ -18,8 +18,7 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender) {
         if(firstRender) {
-            var storageTasks = await LocalStorageAccessor.GetValueAsync<List<TodoTask>>("todos");
-            foreach(TodoTask t in storageTasks) tasks.Add(t);
+            tasks = await Http.GetFromJsonAsync<WeatherForecast[]>("https://localhost/7169/api/TodoItems");
             StateHasChanged();
         }
     }
