@@ -1,8 +1,10 @@
 namespace ToDoList.DTO {
-    public class TodoTask {
-        public string? Text { get; init; }
-        public bool Completed { get; set; } = false;
+   public class TodoTask
+{
+    public long Id { get; set; }
+    public string? Name { get; set; }
+    public bool IsComplete { get; set; }
 
-        public override string ToString() => Text ?? string.Empty;
-    }
+    public string? Secret { get; set; }
+}
 }

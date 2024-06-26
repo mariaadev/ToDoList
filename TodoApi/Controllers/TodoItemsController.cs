@@ -1,6 +1,8 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TodoApi.Models;
+using ToDoList.DTO;
 
 namespace TodoApi.Controllers;
 
@@ -9,25 +11,24 @@ namespace TodoApi.Controllers;
 public class TodoItemsController : ControllerBase
 {
     private readonly TodoContext _context;
-
-    public TodoItemsController(TodoContext context)
+    private readonly IMapper _mapper;
+    public TodoItemsController(TodoContext context,IMapper mapper)
     {
         _context = context;
+        _mapper = mapper;
     }
 
     // GET: api/TodoItems
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<TodoItemDTO>>> GetTodoItems()
+    public async Task<ActionResult<IEnumerable<TodoTask>>> GetTodoItems()
     {
-        return await _context.TodoItems
-            .Select(x => ItemToDTO(x))
-            .ToListAsync();
+        return Ok(_mapper.Map<IEnumerable<TodoTask>>(await _context.TodoItems.ToListAsync()));
     }
 
     // GET: api/TodoItems/5
     // <snippet_GetByID>
     [HttpGet("{id}")]
-    public async Task<ActionResult<TodoItemDTO>> GetTodoItem(long id)
+    public async Task<ActionResult<TodoItem>> GetTodoItem(long id)
     {
         var todoItem = await _context.TodoItems.FindAsync(id);
 
@@ -36,7 +37,7 @@ public class TodoItemsController : ControllerBase
             return NotFound();
         }
 
-        return ItemToDTO(todoItem);
+        return todoItem;
     }
     // </snippet_GetByID>
 
