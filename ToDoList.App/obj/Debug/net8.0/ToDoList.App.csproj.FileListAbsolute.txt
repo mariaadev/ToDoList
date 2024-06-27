@@ -1030,3 +1030,17 @@ c:\Users\maria.amzil.ext\ToDoList\ToDoList.App\obj\Debug\net8.0\compressed\m4jot
 c:\Users\maria.amzil.ext\ToDoList\ToDoList.App\obj\Debug\net8.0\compressed\q45v9wrevw.gz
 c:\Users\maria.amzil.ext\ToDoList\ToDoList.App\obj\Debug\net8.0\compressed\tgic3hyvrp.gz
 c:\Users\maria.amzil.ext\ToDoList\ToDoList.App\obj\Debug\net8.0\ToDoList.App.sourcelink.json
+c:\Users\maria.amzil.ext\ToDoList\ToDoList.App\bin\Debug\net8.0\wwwroot\_framework\AutoMapper.wasm
+c:\Users\maria.amzil.ext\ToDoList\ToDoList.App\bin\Debug\net8.0\wwwroot\_framework\ToDoList.DTO.pdb
+c:\Users\maria.amzil.ext\ToDoList\ToDoList.App\bin\Debug\net8.0\wwwroot\_framework\ToDoList.DTO.wasm
+c:\Users\maria.amzil.ext\ToDoList\ToDoList.App\bin\Debug\net8.0\wwwroot\_framework\AutoMapper.wasm.gz
+c:\Users\maria.amzil.ext\ToDoList\ToDoList.App\bin\Debug\net8.0\wwwroot\_framework\ToDoList.DTO.wasm.gz
+c:\Users\maria.amzil.ext\ToDoList\ToDoList.App\bin\Debug\net8.0\wwwroot\_framework\ToDoList.DTO.pdb.gz
+c:\Users\maria.amzil.ext\ToDoList\ToDoList.App\bin\Debug\net8.0\AutoMapper.dll
+c:\Users\maria.amzil.ext\ToDoList\ToDoList.App\bin\Debug\net8.0\ToDoList.DTO.dll
+c:\Users\maria.amzil.ext\ToDoList\ToDoList.App\bin\Debug\net8.0\ToDoList.DTO.pdb
+c:\Users\maria.amzil.ext\ToDoList\ToDoList.App\obj\Debug\net8.0\webcil\AutoMapper.wasm
+c:\Users\maria.amzil.ext\ToDoList\ToDoList.App\obj\Debug\net8.0\webcil\ToDoList.DTO.wasm
+c:\Users\maria.amzil.ext\ToDoList\ToDoList.App\obj\Debug\net8.0\compressed\58cnyt5ss7.gz
+c:\Users\maria.amzil.ext\ToDoList\ToDoList.App\obj\Debug\net8.0\compressed\ai40gimvsi.gz
+c:\Users\maria.amzil.ext\ToDoList\ToDoList.App\obj\Debug\net8.0\compressed\r6tygu6808.gz
