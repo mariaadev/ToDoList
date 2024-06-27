@@ -20,6 +20,16 @@
     private List<TodoTask> tasks = new List<TodoTask>();
     private string TaskText { get; set; }
 
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadTasksAsync();
+    }
+
+    private async Task LoadTasksAsync()
+    {
+        tasks = await Http.GetFromJsonAsync<List<TodoTask>>("http://localhost:5025/api/TodoItems");
+    }
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
@@ -43,7 +53,8 @@
         {
             tasks.Add(newTask);
             TaskText = "";
-            StateHasChanged();
+            await LoadTasksAsync();
+            //StateHasChanged();
         }
     }
 
