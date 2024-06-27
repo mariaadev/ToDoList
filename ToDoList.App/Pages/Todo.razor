@@ -1,8 +1,10 @@
 @page "/todo"
+
 @using global::ToDoList.App
 @using global::ToDoList.DTO
 @inject LocalStorageAccessor LocalStorageAccessor
 @inject HttpClient Http
+
 <PageTitle>Todo</PageTitle>
 
 <h1>Todo</h1>
@@ -18,20 +20,20 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender) {
         if(firstRender) {
-            tasks = await Http.GetFromJsonAsync<List<TodoTask>>("https://localhost/5025/api/TodoItems");
+            tasks = await Http.GetFromJsonAsync<List<TodoTask>>("http://localhost:5025/api/TodoItems");
             StateHasChanged();
         }
     }
 
+    private async Task SaveAsync() {
+        // ESTO TA FEO, NO HACER
+        await Task.Delay(1);
+        await LocalStorageAccessor.SetValueAsync<List<TodoTask>>("todos", tasks);
+    }
+
     private async Task AddTaskAsync() {
-        tasks.Add(new TodoTask { Text = TaskText });
+        tasks.Add(new TodoTask { Name = TaskText });
         await LocalStorageAccessor.SetValueAsync<List<TodoTask>>("todos", tasks);
         TaskText = "";
-    }
-    
-    private async Task SaveAsync() {
-        //ESTA FEO NO HACER
-        //await Task.Delay(1);
-        await LocalStorageAccessor.SetValueAsync<List<TodoTask>>("todos", tasks);
     }
 }
