@@ -34,10 +34,10 @@ namespace TodoApi.Controllers
 
             if (todoItem == null)
             {
-                return NotFound();
+                return NotFound ();
             }
 
-            return todoItem;
+            return  todoItem;
         }
 
         // PUT: api/TodoItems/5
@@ -74,8 +74,9 @@ namespace TodoApi.Controllers
         // POST: api/TodoItems
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<TodoItem>> PostTodoItem(TodoItem todoItem)
-        {
+        public async Task<ActionResult<TodoTask>> PostTodoItem(TodoItem todoItem)
+        {   
+            //mappejar dto abans de processar-lo
             _context.TodoItems.Add(todoItem);
             await _context.SaveChangesAsync();
 
