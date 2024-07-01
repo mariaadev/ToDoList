@@ -10,11 +10,11 @@
 {
     <p>
         <input type="checkbox" @bind="item.IsComplete" @onclick="() => SaveAsync(item)" /> @item.Name
-        <button @onclick="() => DeleteTaskAsync(item.Id)" class="btn btn-danger">Delete</button>
+        <button @onclick="() => DeleteTaskAsync(item.Id)" class="btn btn-danger btn-sm">Delete</button>
     </p>
 }
 <input type="text" @bind="TaskText" />
-<button class="btn btn-primary" @onclick="AddTaskAsync">Add</button>
+<button class="btn btn-primary btn-sm" @onclick="AddTaskAsync">Add</button>
 
 @code {
     private List<TodoTask> tasks = new List<TodoTask>();
@@ -27,28 +27,28 @@
 
     private async Task LoadTasksAsync()
     {
-        tasks = await Http.GetFromJsonAsync<List<TodoTask>>("http://localhost:5025/api/TodoItems");
+        tasks = await Http.GetFromJsonAsync<List<TodoTask>>("https://localhost:7025/api/TodoItems");
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
-            tasks = await Http.GetFromJsonAsync<List<TodoTask>>("http://localhost:5025/api/TodoItems");
+            tasks = await Http.GetFromJsonAsync<List<TodoTask>>("https://localhost:7025/api/TodoItems");
             StateHasChanged();
         }
     }
 
     private async Task SaveAsync(TodoTask todoTask)
     {
-        await Http.PutAsJsonAsync($"http://localhost:5025/api/TodoItems/{todoTask.Id}", todoTask);
+        await Http.PutAsJsonAsync($"https://localhost:7025/api/TodoItems/{todoTask.Id}", todoTask);
         // Manejar la respuesta si es necesario
     }
 
     private async Task AddTaskAsync()
     {
         var newTask = new TodoTask { Name = TaskText };
-        var response = await Http.PostAsJsonAsync("http://localhost:5025/api/TodoItems", newTask);
+        var response = await Http.PostAsJsonAsync("https://localhost:7025/api/TodoItems", newTask);
         if (response.IsSuccessStatusCode)
         {
             tasks.Add(newTask);
@@ -60,7 +60,7 @@
 
     private async Task DeleteTaskAsync(long taskId)
     {
-        var response = await Http.DeleteAsync($"http://localhost:5025/api/TodoItems/{taskId}");
+        var response = await Http.DeleteAsync($"https://localhost:7025/api/TodoItems/{taskId}");
         if (response.IsSuccessStatusCode)
         {
             var taskToDelete = tasks.FirstOrDefault(t => t.Id == taskId);
