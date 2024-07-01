@@ -8,13 +8,15 @@
 <h1>To Do List</h1>
 @foreach (TodoTask item in tasks)
 {
-    <p>
+    <p class="task-container">
         <input type="checkbox" @bind="item.IsComplete" @onclick="() => SaveAsync(item)" /> @item.Name
-        <button @onclick="() => DeleteTaskAsync(item.Id)" class="btn btn-danger btn-sm">Delete</button>
+        <button @onclick="() => DeleteTaskAsync(item.Id)" class="btn btn-danger btn-sm rounded-pill">Delete</button>
     </p>
 }
-<input type="text" @bind="TaskText" />
-<button class="btn btn-primary btn-sm" @onclick="AddTaskAsync">Add</button>
+    <input type="text" @bind="TaskText" />
+<button class="btn btn-primary btn-sm rounded-pill" @onclick="AddTaskAsync">Add</button>
+
+<button class="btn btn-danger btn-sm rounded-pill" @onclick="DeleteAllTasksAsync">Delete All</button>
 
 @code {
     private List<TodoTask> tasks = new List<TodoTask>();
@@ -71,4 +73,15 @@
             }
         }
     }
+
+    private async Task DeleteAllTasksAsync()
+    {
+        var response = await Http.DeleteAsync("https://localhost:7025/api/TodoItems/DeleteAll");
+        if (response.IsSuccessStatusCode)
+        {
+            tasks.Clear();
+            StateHasChanged();
+        }
+    }
+
 }

@@ -34,10 +34,10 @@ namespace TodoApi.Controllers
 
             if (todoItem == null)
             {
-                return NotFound ();
+                return NotFound();
             }
 
-            return  todoItem;
+            return todoItem;
         }
 
         // PUT: api/TodoItems/5
@@ -75,7 +75,7 @@ namespace TodoApi.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<TodoTask>> PostTodoItem(TodoItem todoItem)
-        {   
+        {
             //mappejar dto abans de processar-lo
             _context.TodoItems.Add(todoItem);
             await _context.SaveChangesAsync();
@@ -96,6 +96,16 @@ namespace TodoApi.Controllers
             _context.TodoItems.Remove(todoItem);
             await _context.SaveChangesAsync();
 
+            return NoContent();
+        }
+
+        [HttpDelete]
+        [Route("DeleteAll")]
+        public async Task<IActionResult> DeleteAllTodoItems()
+        {
+            var allTasks = await _context.TodoItems.ToListAsync();
+            _context.TodoItems.RemoveRange(allTasks);
+            await _context.SaveChangesAsync();
             return NoContent();
         }
 

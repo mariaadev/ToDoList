@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "ToDoList.App",
   "resources": {
-    "hash": "sha256-5wruJBN0gwVmDrw50vsTZThxFnqrg0MjyLvLTWMQYh4=",
+    "hash": "sha256-JYp19vH9BE1P4ZamvGWLCgTiL19ndysMaNHcSYBZPMg=",
     "jsModuleNative": {
       "dotnet.native.8.0.6.j8790ffzf5.js": "sha256-YU6M9+jtDVnB8/wtrgIndOstzNh778Ls8g9XnbjorSk="
     },
@@ -210,11 +210,11 @@
       "netstandard.wasm": "sha256-z1EJOmgVhSpTopn7Tek/0P//MKGF1I3NUD/sh4oLnwY=",
       "System.Private.CoreLib.wasm": "sha256-tuIWpR30u0OoEVtv4pXZ47mEpI2AmFBIyYFPnqDZZfw=",
       "ToDoList.DTO.wasm": "sha256-PVGagvTiVQYCHvRgBESbf80Mf1X6VMtH2cr+5TcKTIE=",
-      "ToDoList.App.wasm": "sha256-i8/pEMglaueZRsYEsHfS2ljso+ZsCYrvtrx6WyoRPhs="
+      "ToDoList.App.wasm": "sha256-qWEJlOdailhssyLgpvr/phXAj29hNbr1sEh6kwmUcB4="
     },
     "pdb": {
       "ToDoList.DTO.pdb": "sha256-rKW2RVvlPpcu1RT7lCq4kg+Q7yMqFZGs5IVny9XGCt0=",
-      "ToDoList.App.pdb": "sha256-65iQ9ajD4Ad2r4F9jZvRN9mPiQz74u1TAyNY6l0brq0="
+      "ToDoList.App.pdb": "sha256-i9daTAPYHo7iQ+eRQUIqzwAGjyQB+RWKwbLTraw7bFQ="
     }
   },
   "cacheBootResources": true,
